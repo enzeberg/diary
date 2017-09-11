@@ -1,0 +1,32 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.container-main {
+  width: 600px;
+}
+
+a.app-header {
+  display: block;
+  text-decoration: none;
+  width: 500px;
+  margin: 0 auto;
+  border: 1px solid #7DBBE7;
+  border-radius: 5px;
+  color: #7DBBE7;
+}
+
+.header {
+  text-align: center;
+}
+
+.operations {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #B7B4B4;
+}
+
+.article {
+  margin-top: 30px;
+}
+

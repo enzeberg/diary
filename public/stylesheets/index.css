@@ -1,0 +1,42 @@
+.popup {
+  display: none;
+  width: 600px;
+  position: absolute;
+  top: 0;
+  padding: 20px;
+  background: #FA938F;
+  /* opacity: 0.5; */
+  border-radius: 8px;
+}
+.popup .message {
+  text-align: center;
+}
+.popup .row {
+  margin-top: 30px;
+}
+.popup .row .col {
+  text-align: center;
+}
+.popup button {
+  width: 80px;
+}
+
+ul.diary-list {
+  margin-top: 40px;
+}
+
+li.diary {
+  margin-bottom: 10px;
+  list-style-type: none;
+  line-height: 34px;
+}
+
+a.diary-link {
+  /* display: inline-block;
+  width: 200px; */
+}
+
+button.del {
+ /*  position: relative;
+  left: 300px; */
+}
