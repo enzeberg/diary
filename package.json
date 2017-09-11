@@ -1,7 +1,8 @@
 {
   "name": "diary",
   "description": "Simple diary app",
-  "version": "0.0.0",
+  "author": "enzeberg",
+  "version": "0.1.0",
   "private": true,
   "license": "MIT",
   "scripts": {
