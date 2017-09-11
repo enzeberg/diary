@@ -1,0 +1,35 @@
+extends layout
+
+block head
+  link(rel='stylesheet', href='/stylesheets/index.css')
+
+block content
+  h2.header Index
+  .article
+    .row.operations
+      .col-md-10
+        a(class='btn btn-success' href='/new_diary') + New diary
+      .col-md-2
+        button(class='btn btn-danger deleteAll') Delete all
+    .popup
+      h3.message Do you really want to delete all your diaries?
+      .row
+        .col.col-md-6
+          button.btn.btn-outline-default(id='delete-all-confirm', data-value='Yes') Yes
+        .col.col-md-6
+          button.btn.btn-outline-default(id='delete-all-cancel', data-value='No') No
+    //- p= message
+    ul(class='diary-list')
+      each diary in diaries
+        li(class='row diary')
+          //- a(href=`/diary/${diary.title}`, class='col-md-6 diary-link')= diary.title.replace(/-/g, ' ')
+          a(href=`/diary/?id=${diary.id}`, class='col-md-5 diary-link')= diary.title.replace(/-/g, ' ')
+          span(class='col-md-3 diary-date')= diary.date
+          div.col-md-2
+            a.btn.btn-primary(href=`/diary/edit/?id=${diary.id}`) &nbsp;&nbsp;Edit&nbsp;&nbsp;
+          div(class='col-md-2')
+            button(class='btn btn-danger del' data-diary-id=diary.id) Delete
+
+    script(src='/javascripts/request.js')
+    script(src='/javascripts/delete_diary.js')
+    script(src='/javascripts/delete_all.js')

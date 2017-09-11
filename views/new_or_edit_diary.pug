@@ -1,0 +1,27 @@
+extends layout
+
+block head
+  link(rel='stylesheet', href='/stylesheets/new_or_edit_diary.css')
+
+block content
+  h2.header= pageTitle
+  .article
+    form()
+      span Title:
+      input.form-control(id='title', type='text', name='title', value=diary ? diary.title.replace(/-/g, ' ') : '')
+      br
+      span Weather:
+      select.form-control(id='weather', type='text', name='weather', value=diary ? diary.weather : '')
+        option(value='Sunny') Sunny
+        option(value='Overcast') Overcast
+        option(value='Cloudy') Cloudy
+        option(value='Rain') Rain
+      br
+      span Text:
+      textarea.form-control(id='text', name='text')= diary ? diary.text : ''
+      br
+      button.btn.btn-primary(id='save-btn', type='submit', data-purpose=diary ? 'Update' : 'Create',
+        data-diary-id=diary ? diary.id : '') Save
+      a.btn.btn-basic(href=pageTitle === 'New diary' ? '/' : `/diary/?id=${diary.id}`) Cancel
+    script(src='/javascripts/request.js')
+    script(src='/javascripts/submit_diary.js')

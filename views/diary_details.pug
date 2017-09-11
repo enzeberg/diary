@@ -1,0 +1,32 @@
+extends layout
+
+block head
+  link(rel='stylesheet', href='/stylesheets/diary_details.css')
+
+block content
+  h2.header Read diary
+  .row.operations
+    .col-md-6
+    .col-md-3
+      a.btn.btn-primary(href=`/diary/edit/?id=${diary.id}`) &nbsp;&nbsp;Edit&nbsp;&nbsp;
+    .col-md-3
+      //- button.btn.btn-danger.del(data-diary-title=diary.title) Delete
+      button.btn.btn-danger.del(data-diary-id=diary.id) Delete
+  .article
+    h3.diary-title= diary.title.replace(/-/g, ' ')
+    br
+    .row.h4
+      .col-md-2
+        span= diary.date
+      .col-md-6
+        span= diary.day
+      .col-md-4
+        span Weather: #{diary.weather}
+    br
+    br
+    div
+      - var paragraphs = diary.text.split('\n');
+      each para in paragraphs
+        p= para
+    script(src='/javascripts/request.js')
+    script(src='/javascripts/delete_diary.js')
