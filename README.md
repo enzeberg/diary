@@ -16,7 +16,8 @@ A simple diary app built with Express.js, Pug and MongoDB
     npm install
 ### Run the app
 #### Start MongoDB
-    mongod
+    mkdir data
+    mongod --dbpath=./data
 #### Start the server
     npm start
 ### Access `http://localhost:3000`
