@@ -8,12 +8,9 @@ A simple diary app built with Express.js, Pug and MongoDB
 ### Clone this repo and `cd` to the `diary` directory
     git clone https://github.com/enzeberg/diary.git
     cd diary
-### Install static resources
-    cd public
-    bower install
-### Install Node dependencies
-    cd ..
+### Install dependencies
     npm install
+    bower install
 ### Run the app
 #### Start MongoDB
     mkdir data
