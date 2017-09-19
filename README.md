@@ -10,7 +10,6 @@ A simple diary app built with Express.js, Pug and MongoDB
     cd diary
 ### Install dependencies
     npm install
-    bower install
 ### Run the app
 #### Start MongoDB
     mkdir data
