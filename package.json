@@ -6,6 +6,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "install": "bower install",
     "start": "node ./bin/www"
   },
   "dependencies": {
