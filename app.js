@@ -13,7 +13,12 @@ const diary = require('./routes/diary');
 
 var app = express();
 
-var db = mongoose.connect('mongodb://127.0.0.1:27017/diary', (err) => {
+// var db = mongoose.connect('mongodb://127.0.0.1:27017/diary', (err) => {
+//   if (err) console.error(err);
+//   console.log('Database connected.');
+// });
+var db = mongoose.connect(process.env.MONGODB_ADDON_URI ||
+                          'mongodb://127.0.0.1:27017/diary', (err) => {
   if (err) console.error(err);
   console.log('Database connected.');
 });
